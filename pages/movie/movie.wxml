@@ -1,0 +1,26 @@
+<loading wx:if="{{loading}}">正在加载....</loading>
+<view class="movie">
+  <view class="movie_tags">正在热映>></view>
+  <view class="movie_box">
+    <view class="movie_content" wx:for="{{hotShowing}}" wx:key="key">
+      <image class="movie_img" src="{{item.images.large}}"></image>
+      <view class="movie_msg">
+        <text class="movie_name">{{item.title}}</text>
+        <text class="movie_average">豆瓣评分：{{item.rating.average}}</text>
+        <text class="movie_year">上映时间：{{item.year}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="movie_tags">即将上映>></view>
+  <view class="movie_box">
+    <view class="movie_content" wx:for="{{comingSoon}}" wx:key="key">
+      <image class="movie_img" src="{{item.images.large}}"></image>
+      <view class="movie_msg">
+        <text class="movie_name">{{item.title}}</text>
+        <text class="movie_average">豆瓣评分：{{item.rating.average}}</text>
+        <text class="movie_year">上映时间：{{item.year}}</text>
+      </view>
+    </view>
+  </view>
+</view>    

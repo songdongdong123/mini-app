@@ -1,0 +1,51 @@
+/* pages/movie/movie.wxss */
+.movie{
+  width:90%;
+  margin:0 auto;
+}
+.movie_tags{
+  border-bottom: 1px dashed #ddd;
+  color: #3377aa;
+  font-size:15px;
+  padding-bottom:10px;
+}
+.movie_box{
+  margin-top:10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.movie_msg{
+  text-align: center;
+}
+.movie_content{
+  height:230px;
+  width:40%;
+}
+.movie_img{
+  width:140px;
+  height:170px;
+}
+.movie_name{
+  color: #3377aa;
+  font-size:12px;
+  display: block;
+}
+.movie_average{
+  color:rgb(255,172,45);
+  font-size:12px;
+  display: block;
+}
+.movie_year{
+  color: #3377aa;
+  font-size:12px;
+  display: block;
+}
+.movie_original{
+  color: #3377aa;
+  font-size:12px;
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,42 @@
+<loading class="loding" wx:if="{{loading}}">正在加载...</loading>
+<view class="books">
+  <view class="book_tag">
+    <text class="hotbooks_header">热门图书</text>
+  </view>
+  <view class="books_content" wx:for="{{hotArr}}" wx:key="key" wx:if="{{!loading}}">
+     <image class="hotbook_img" src="{{item.image}}"></image>
+      <view class="hotbook_msg">
+        <text class="hotbook_title">{{item.title}}</text>
+        <text class="hotbook_average">豆瓣评分：{{item.rating.average}}</text>
+        <text class="hotbook_tags">豆瓣标签：<text wx:for="{{item.tags}}" wx:for-item="list" wx:key="key">{{list.name}}</text></text>
+        <text class="hotbook_pubdate">出版时间：{{item.pubdate}}</text>
+        <text class="hotbook_publisher">{{item.publisher}}</text>
+      </view>
+  </view>
+  <view class="book_tag">
+    <text class="hotbooks_header">热门小说</text>
+  </view>
+  <view class="books_content" wx:for="{{hotFictionArr}}" wx:key="key" wx:if="{{!loading}}">
+     <image class="hotbook_img" src="{{item.image}}"></image>
+      <view class="hotbook_msg">
+        <text class="hotbook_title">{{item.title}}</text>
+        <text class="hotbook_average">豆瓣评分：{{item.rating.average}}</text>
+        <text class="hotbook_tags">豆瓣标签：<text wx:for="{{item.tags}}" wx:for-item="list" wx:key="key">{{list.name}}</text></text>
+        <text class="hotbook_pubdate">出版时间：{{item.pubdate}}</text>
+        <text class="hotbook_publisher">{{item.publisher}}</text>
+      </view>
+  </view>
+  <view class="book_tag">
+    <text class="hotbooks_header">热门散文</text>
+  </view>
+  <view class="books_content" wx:for="{{proseArr}}" wx:key="key" wx:if="{{!loading}}">
+     <image class="hotbook_img" src="{{item.image}}"></image>
+      <view class="hotbook_msg">
+        <text class="hotbook_title">{{item.title}}</text>
+        <text class="hotbook_average">豆瓣评分：{{item.rating.average}}</text>
+        <text class="hotbook_tags">豆瓣标签：<text wx:for="{{item.tags}}" wx:for-item="list" wx:key="key">{{list.name}}</text></text>
+        <text class="hotbook_pubdate">出版时间：{{item.pubdate}}</text>
+        <text class="hotbook_publisher">{{item.publisher}}</text>
+      </view>
+  </view>
+</view>

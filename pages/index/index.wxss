@@ -1,0 +1,88 @@
+/**index.wxss**/
+
+.index{
+  width:90%;
+  margin:0 auto;
+}
+
+.title_prose{
+  color: #3377aa;
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+.book_image{
+  width:200rpx;
+  height:130px;
+}
+.content{
+  border-top: 1px dashed #ddd;
+  padding: 20px 0 20px;
+  display: flex;
+  /* justify-content:space-around; */
+}
+.book_message{
+  margin-left:15px;
+  margin:auto 0;
+  padding:10px;
+}
+.book_name{
+  color: #666;
+  font-size:13px;
+  text-overflow :ellipsis;
+  width:50px;
+  overflow: hidden;
+}
+.book_title{
+  display: block;
+  color: #3377aa;
+  font-size:13px;
+}
+.book_describe{
+  font-size:13px;
+  color: #999;
+  width:200px;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.book_publisher{
+  color: #666;
+  font-size:13px;
+  text-overflow :ellipsis;
+  width:50px;
+  overflow: hidden;
+}
+.movie_title{
+  color: #3377aa;
+  font-size:15px;
+  margin-bottom:10px;
+}
+.movie_image{
+  width:200rpx;
+  height:130px;
+}
+.actors{
+  font-size:13px;
+  width:150px;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.actors_photos{
+  display: flex;
+  margin-top:10px;
+}
+.actor_photo{
+  width:60px;
+  height:60px;
+  margin-right:10px;
+  border-radius: 50%;
+}
+.actor_photo image:nth-child(1){
+  margin-left:5px;
+}

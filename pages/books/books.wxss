@@ -1,0 +1,60 @@
+/* pages/books/books.wxss */
+.books{
+  width:90%;
+  margin:0 auto;
+}
+.book_tag{
+
+}
+.hotbooks_header{
+  color: #3377aa;
+  font-size:15px;
+  margin-bottom:10px;
+}
+.books_content{
+  display: flex;
+  align-items: center;
+  border-top: 1px dashed #ddd;
+  padding: 20px 0 20px;
+}
+.hotbook_img{
+  width:200rpx;
+  height:130px;
+  border: 1px solid #ddd;
+}
+.hotbook_title{
+  font-size:13px;
+  color:#3377aa;
+}
+.hotbook_average{
+  display: block;
+  font-size:13px;
+  margin-top:5px;
+}
+.hotbook_pubdate{
+  display: block;
+  font-size:13px;
+  margin-top:5px;
+}
+.hotbook_tags{
+  font-size:13px;
+  display: block;
+  width:200px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-top:5px;
+}
+.hotbook_publisher{
+   font-size:13px;
+}
+.hotbook_msg{
+  margin-left:10px;
+}
+.loding{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
