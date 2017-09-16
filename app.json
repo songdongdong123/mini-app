@@ -1,9 +1,13 @@
 {
   "pages":[
-    "pages/welcome/welcome",
     "pages/index/index",
+    "pages/welcome/welcome",
+    "pages/index/bookdetail/bookdetail",
+    "pages/index/moviedetail/moviedetail",
     "pages/movie/movie",
-    "pages/books/books"
+    "pages/movie/moviedetail/moviedetail",
+    "pages/books/books",
+    "pages/books/bookdetail/bookdetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -18,9 +22,9 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "主页",
-        "iconPath": "iamge/icon/index.png",
-        "selectedIconPath": "iamge/icon/activeIndex.png"
+        "text": "音乐",
+        "iconPath": "iamge/icon/music.png",
+        "selectedIconPath": "iamge/icon/activeMusic.png"
       },
       {
         "pagePath": "pages/books/books",

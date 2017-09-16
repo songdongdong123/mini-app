@@ -43,6 +43,13 @@ Page({
       })
     }
   },
+  toDetail: function (e) {
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      //目的页面地址
+      url: "bookdetail/bookdetail?id=" + id
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

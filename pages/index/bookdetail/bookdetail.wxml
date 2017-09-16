@@ -1,0 +1,35 @@
+<loading wx:if="{{loading}}"></loading>
+<view class="bookDetail">
+  <view class="detail_header">
+    <text class="detali_title">{{bookDetail.title}}</text>
+    <view class="detail_title_msg">
+      <image wx:if="{{bookDetail.images.large}}" src='{{bookDetail.images.large}}' class='book_image'></image>
+      <view class="bookDetail_title_others">
+        <text class="author">作者：{{bookDetail.author[0]}}</text>
+        <text class="author">豆瓣评分：{{bookDetail.author[0]}}</text>
+        <text class="author">出版社：{{bookDetail.rating.average}}</text>
+        <text class="author">原名：{{bookDetail.origin_title}}</text>
+        <text class="author">译者：{{bookDetail.translator[0]}}</text>
+        <text class="author">出版日期：{{bookDetail.pubdate}}</text>
+        <text class="author">页数：{{bookDetail.pages}}</text>
+        <text class="author">价格：{{bookDetail.price}}</text>
+        <text class="author">丛书：{{bookDetail.series.title}}</text>
+        <text class="author">ISBN：{{bookDetail.isbn13}}</text> 
+      </view>
+      <view class="intro">
+        <text class="intro_author">
+          <text class="intro_title">作者简介：</text>
+          <text class="intro_content">{{bookDetail.author_intro}}</text>
+        </text>
+        <text class="intro_author">
+          <text class="intro_title">内容简介：</text>
+          <text class="intro_content">{{bookDetail.summary}}</text>
+        </text>
+        <text class="intro_author">
+          <text class="intro_title">部分章节：</text>
+          <text class="intro_contents">{{bookDetail.catalog}}</text>
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
