@@ -1,0 +1,15 @@
+<loading class="loding" wx:if="{{loading}}">正在加载...</loading>
+<view class="musicdetail" wx:if="{{!loading}}">
+    <text class='music_title'>{{musicdetail.title}}</text>
+    <view class='music_info'>
+      <image class='music_image' src="{{musicdetail.image}}" wx:if="{{musicdetail.image}}"></image>
+      <view class='music_msg'>
+        <text class='singer'><text class='lable'>表演者：</text>{{authorStr}}</text>
+        <text class='doubantags'><text class='lable'>豆瓣评分：</text>{{musicdetail.rating.average}}</text>
+        <text class='doubantags'><text class='lable'>豆瓣标签：</text>{{tagStr}}</text>
+      </view>
+    </view>
+    <view>
+      <text class='otherMusic'>{{musicdetail.attrs.tracks}}</text>
+    </view>
+</view>

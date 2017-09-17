@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <loading class="loding" wx:if="{{loading}}">正在加载...</loading>
-<view class="index" wx:if="{{!loading}}">
+<view class="index" wx:if="{{contentState}}">
   <text class="hot_tags">热门音乐标签</text>
   <view class="index_tags">
     <text class="index_tags_title">风格：</text>
@@ -36,6 +36,16 @@
         class="deatil_tags {{index==cur3? 'active':''}} "
         wx:key="key"
         wx:for="{{artistTags}}">{{item}}</text>
+    </view>
+  </view>
+  <view class='music_list'>
+    <view class="list_content" wx:for="{{musicArr}}" wx:key="{{key}}" bindtap='toDetail' data-id="{{item.id}}">
+      <image src="{{item.image}}" class='music_image'></image>
+      <view class='music_msg'>
+        <text class='music_title'>{{item.title}}</text>
+        <text class='music_tags'>{{item.attrs.singer[0]}}/{{item.attrs.pubdate[0]}}</text>
+        <text class='music_footer'>{{item.targs}}</text>
+      </view>   
     </view>
   </view>
 </view>

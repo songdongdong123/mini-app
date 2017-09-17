@@ -5,39 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movieDetail: {},
-    loading: true,
-    unloading: false
+    musicdetail: {},
+    otherSongs: [],
+    authorStr: '',
+    tagStr: '',
+    loading: true
   },
 
   /**
-   * 自定义时间处理函数
-   * 
-  */
-  methods: {
-    getmovieDetail (id) {
-      return new Promise((reslove, reject) => {
-        api.getDatas('https://api.douban.com/v2/movie/subject/' + id).then(res => {
-          if (res.statusCode === 200) {
-            reslove(res.data)
-          }
-        })
-      })
+   * 自定义事件处理
+   * */
+   handleStr: function (arr) {
+    let tempStr = ''
+    for (let list of arr) {
+      tempStr += list.name + '/'
     }
-  },
+    tempStr = tempStr.slice(0, tempStr.length - 1)
+    return tempStr
+   },
+   getMusicDetail: function (id) {
+    api.getDatas('https://api.douban.com/v2/music/' + id).then(res => {
+      let authors = this.handleStr(res.data.author)
+      let tags = this.handleStr(res.data.tags)
+      this.setData({
+        musicdetail: res.data,
+        authorStr: authors,
+        tagStr: tags,
+        loading: false
+      })
+    })
+   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.methods.getmovieDetail(options.id).then(res => {
-      this.setData({
-        movieDetail: res,
-        loading: false,
-        unloading: true
-      })
-      console.log(this.data.movieDetail)
-    })
+    let id = '26342954'
+    console.log(options.id)
+    this.getMusicDetail(options.id)
   },
 
   /**

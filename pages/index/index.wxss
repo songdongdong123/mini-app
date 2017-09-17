@@ -47,6 +47,41 @@
   background: #072;
   color:#fff;
 }
-.index_tags{
-  
+
+.music_image{
+  width:60px;
+  height: 70px;
+}
+.list_content{
+  display: flex;
+  align-items: center;
+  margin-top:15px;
+}
+.music_title{
+  font-size: 13px;
+  color:#333;
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 260px;
+}
+.music_footer{
+  font-size: 13px;
+  color:#666;
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 260px;
+  margin-top: 5px;
+}
+.music_msg{
+  margin-left:15px;
+}
+.music_tags{
+  display: block;
+  font-size: 12px;
+  color: #e09015;
+  margin-top: 5px;
 }

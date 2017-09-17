@@ -1,0 +1,58 @@
+.musicdetail{
+  width:90%;
+  margin: 0 auto;
+}
+.music_info{
+  display: flex;
+  align-items: center; 
+}
+.music_image{
+  width:90px;
+  height:140px; 
+}
+.image_box{
+  display: flex;
+  justify-content: center;
+}
+.music_msg{
+   width:230px; 
+   margin-left: 15px;
+}
+.music_title{
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #37a;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-top: 15px;
+}
+.singer{
+  display: block;
+  font-size:13px;
+  color:#999;
+  border-bottom: 1px dashed #ddd;
+}
+.lable{
+  color: #37a;
+  font-size: 17px;
+}
+.doubantags{
+  display: block;
+  font-size:15px;
+  color: #999;
+  margin-top:5px;
+}
+.otherMusic{
+  display: block;
+  font-size: 15px;
+  color: #37a;
+  padding: 10px 0 10px 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-top: 20px;
+  white-space: nowrap;
+}

@@ -1,9 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/musicdetail/musicdetail",
     "pages/welcome/welcome",
-    "pages/index/bookdetail/bookdetail",
-    "pages/index/moviedetail/moviedetail",
     "pages/movie/movie",
     "pages/movie/moviedetail/moviedetail",
     "pages/books/books",
