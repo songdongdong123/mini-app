@@ -1,7 +1,12 @@
 <!--index.wxml-->
 <loading class="loding" wx:if="{{loading}}">正在加载...</loading>
 <view class="index" wx:if="{{contentState}}">
-  <text class="hot_tags">热门音乐标签</text>
+  <view class='header'>
+    <text class="hot_tags">热门音乐标签</text>
+    <view class='search'>
+      <input  bindconfirm="searchMusic" value='{{searchVal}}' confirm-type="search" class='search_ipt' placeholder='搜索'></input>
+    </view>
+  </view>
   <view class="index_tags">
     <text class="index_tags_title">风格：</text>
     <view class="tags_arr">

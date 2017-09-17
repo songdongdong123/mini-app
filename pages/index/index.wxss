@@ -4,6 +4,16 @@
   width:90%;
   margin:0 auto;
 }
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.search_ipt{
+  border: 1px solid #333;
+  padding:3px;
+  border-radius: 5px;
+  width: 150px;
+}
 
 
 .hot_tags{

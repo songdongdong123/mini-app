@@ -14,7 +14,8 @@ Page({
     cur2: -1,
     cur3: -1,
     loading: true,
-    contentState: false
+    contentState: false,
+    searchVal: ''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -26,17 +27,35 @@ Page({
     this.getMusics(this.data.styleTags[0])
     // this.getMovie()
   },
+  searchMusic: function (e) {
+    // console.log(e)
+    this.setData({
+      loading: true
+    })
+    api.getDatas('https://api.douban.com/v2/music/search?tag=' + e.detail.value).then(res => {
+      this.handleStr(res.data.musics)
+      this.setData({
+        musicArr: res.data.musics,
+        loading: false,
+        contentState: true,
+        searchVal: ''
+      })
+    })
+  },
+  handleStr: function(music) {
+    let strTemp = ''
+    for (let list of music) {
+      strTemp = ''
+      for (let item of list.tags) {
+        strTemp += item.name + '/'
+      }
+      strTemp = strTemp.slice(0, strTemp.length - 1)
+      list.targs = strTemp
+    }
+  },
   getMusics: function (tag) {
     api.getDatas('https://api.douban.com/v2/music/search?tag=' + tag).then(res => {
-      let strTemp = ''
-      for (let list of res.data.musics) {
-        strTemp = ''
-        for (let item of list.tags) {
-          strTemp += item.name + '/'
-        }
-        strTemp = strTemp.slice(0, strTemp.length-1)
-        list.targs = strTemp
-      }
+      this.handleStr(res.data.musics)
       this.setData({
         musicArr: res.data.musics,
         loading: false,

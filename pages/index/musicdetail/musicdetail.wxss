@@ -56,3 +56,6 @@
   margin-top: 20px;
   white-space: nowrap;
 }
+.search_ipt{
+  border: 1px solid #333;
+}
