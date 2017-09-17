@@ -16,6 +16,20 @@ Page({
    * 事件处理函数
    * 
   */
+  searchMusic: function (e) {
+    console.log(e)
+    this.setData({
+      loading: true
+    })
+    api.getDatas('https://api.douban.com/v2/book/search?tag=' + e.detail.value).then(res => {
+      console.log(res)
+      this.setData({
+        hotArr: res.data.books,
+        loading: false,
+        searchVal: ''
+      })
+    })
+  },
   getHotBooks: function () {
     api.getDatas('https://api.douban.com/v2/book/search?tag=%E7%83%AD%E9%97%A8&count=5').then(res => {
       let temp = res.data.books

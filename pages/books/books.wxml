@@ -1,5 +1,8 @@
 <loading class="loding" wx:if="{{loading}}">正在加载...</loading>
 <view class="books" wx:if="{{!loading}}">
+  <view class='search'>
+      <input  bindconfirm="searchMusic" value='{{searchVal}}' confirm-type="search" class='search_ipt' placeholder='图书搜索'></input>
+  </view>
   <view class="book_tag">
     <text class="hotbooks_header">热门图书</text>
   </view>
