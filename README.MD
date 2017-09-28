@@ -9,9 +9,9 @@
 > 这是一个很简单的小程序demo里面使用的小程序组件不多，仅供学习使用
 
 ## 效果图展示
-<img src="image/img/a.png" alt=""><img src="image/img/b.png" alt="">
-<img src="image/img/c.png" alt=""><img src="image/img/d.png" alt="">
-<img src="image/img/e.png" alt="">
+<img src="iamge/img/a.png" alt=""><img src="iamge/img/b.png" alt="">
+<img src="iamge/img/c.png" alt=""><img src="iamge/img/d.png" alt="">
+<img src="iamge/img/e.png" alt="">
 
 
  欢迎交流学习（ethans.song.net@gmail.com）
